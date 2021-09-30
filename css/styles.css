@@ -13,7 +13,7 @@
 
 body{
 	
-	font-family:Arial, Helvetica, sans-serif;
+	font-family:Arial, Helvetica, sans-serif;	
 	width: 100%;
 	overflow-x: hidden;
 }
@@ -85,10 +85,8 @@ body{
 	width: 90%;
 	margin: 30px auto;
 	background-image: url(../img/imagen-slide.jpg);
-	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
-	object-fit: cover;
 }
 
 h1{
@@ -104,8 +102,7 @@ h1:hover{
 
 .imagen-container{
 	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
+    margin: 40px auto; 
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-gap: 3px;
@@ -128,15 +125,41 @@ h1:hover{
 	cursor: pointer;
 }
 
-
-
-
-
-
-
-
 /* FIN BANNER CSS */
 
+
+
+/* FOOTER CSS */
+
+.footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding:25px 0px;
+	box-shadow: 2px 5px 10px rgba(0,0,0,.3);	
+	background-color: var(--colorBlanco);
+
+}
+
+/* FIN FOOTER CSS */
+
+
+.texto-footer{
+	line-height:50px;
+	font-size: 1.1rem;
+	color: var(--colorNegro);
+	font-weight: 600;
+	transition: color 0.5s ease;
+}
+
+.texto-footer:hover{
+	color: var(--colorHover);
+	cursor: pointer;
+}
+
+
+/*  FIN FOOTER CSS*/
 
 
 /*RESPONSIVE MENU*/
@@ -185,10 +208,14 @@ h1:hover{
 }
 
 
-	
-
-
 /*RESPONSIVE MENU FIN*/
 
 
-/*  BANNER CSS  */
+/* RESPONSIVE FOOTER */
+
+@media(max-width: 380px){
+	.texto-footer{
+		font-size: 0.8rem;
+	}
+}
+/* RESPONSIVE FOOTER  FIN*/
